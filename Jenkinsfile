@@ -34,6 +34,7 @@ pipeline {
             steps {
 			 echo "In progress..."
               //gradleBuild();
+	      sh './gradlew clean build'
             }
         }
     }
