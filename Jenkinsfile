@@ -36,6 +36,14 @@ pipeline {
 	      sh './gradlew clean build'
             }
         }
+
+	stage('Publish Artifact to Nexus') {
+            steps {
+                sh './gradlew publish --no-daemon'
+            }
+        }
+
+
     }
 }
 
