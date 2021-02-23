@@ -18,6 +18,9 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
+springBoot {
+	mainClass = "els.eu.sharelibs.gradle.integration.BootGradleApplication"
+ }
 
 //war
 jar {
