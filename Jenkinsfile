@@ -5,6 +5,7 @@ pipeline {
 
     tools {
 	maven 'maven-3.6.0'
+	gradle 'gradle-6.8.2'
 	jdk 'jdk-8'
     }
 
@@ -37,11 +38,11 @@ pipeline {
             }
         }
 
-	stage('Publish Artifact to Nexus') {
+	/*stage('Publish Artifact to Nexus') {
             steps {
                 sh './gradlew publish --no-daemon'
             }
-        }
+        }*/
 
 
     }
