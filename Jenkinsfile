@@ -3,10 +3,10 @@
 pipeline {
     agent any
 
-    /*tools {
-        gradle 'gradle-6.8.2'
-		jdk 'jdk-8'
-    }*/
+    tools {
+	maven 'maven-3.6.0'
+	jdk 'jdk-8'
+    }
 
     options {
         disableConcurrentBuilds()
@@ -32,8 +32,6 @@ pipeline {
 
         stage('Build') {
             steps {
-			 echo "In progress..."
-              //gradleBuild();
 	      sh 'chmod +x ./gradlew'
 	      sh './gradlew clean build'
             }
