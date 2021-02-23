@@ -40,7 +40,8 @@ pipeline {
 
 	/*stage('Publish Artifact to Nexus') {
             steps {
-                sh './gradlew publish --no-daemon'
+                //sh './gradlew publish --no-daemon'
+                sh '${gradle}/gradle publish --no-daemon'
             }
         }*/
 
