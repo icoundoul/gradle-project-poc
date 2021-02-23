@@ -1,12 +1,12 @@
-@Library('jenkins-sharedlibs-ci-linux') _
+//@Library('jenkins-sharedlibs-ci-linux') _
 
 pipeline {
-    agent { label 'slave_linux_sisn' }
+    agent any
 
-    tools {
+    /*tools {
         gradle 'gradle-6.8.2'
 		jdk 'jdk-8'
-    }
+    }*/
 
     options {
         disableConcurrentBuilds()
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkoutBranch(BRANCH: env.BRANCH_NAME)
+                checkout scmANCH_NAME)
             }
         }
 
