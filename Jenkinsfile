@@ -34,6 +34,7 @@ pipeline {
             steps {
 			 echo "In progress..."
               //gradleBuild();
+	      sh 'chmod +x ./gradlew'
 	      sh './gradlew clean build'
             }
         }
