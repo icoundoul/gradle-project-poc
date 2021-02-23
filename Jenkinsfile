@@ -33,14 +33,14 @@ pipeline {
 
         stage('Build') {
             steps {
-	      sh '${gradle}/gradle clean build'
+	      sh 'gradle clean build'
             }
         }
 
 	/*stage('Publish Artifact to Nexus') {
             steps {
                 sh './gradlew publish --no-daemon'
-                sh '${gradle}/gradle publish --no-daemon'
+                sh 'gradle publish --no-daemon'
             }
         }*/
 
