@@ -31,9 +31,11 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-	      sh 'gradle clean build'
+        stage ('Build gradle'){
+            steps{
+                withGradle {
+                     sh 'gradle build'
+                }
             }
         }
 

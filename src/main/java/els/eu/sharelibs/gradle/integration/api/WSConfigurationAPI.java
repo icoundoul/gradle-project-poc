@@ -30,7 +30,7 @@ public class WSConfigurationAPI extends AbstractAPI {
 			return ResponseEntity.ok(configurationService.getConfiguration());
 
 		} catch (Exception e) {
-			throw new BussinesException(WS_CONFIGURATION_ERROR_CODE, "problème de la récupération de la configuration");
+			throw new BussinesException(WS_CONFIGURATION_ERROR_CODE, "Problem while retrieving configuration");
 		}
 	}
 }

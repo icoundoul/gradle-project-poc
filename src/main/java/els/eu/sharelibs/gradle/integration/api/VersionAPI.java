@@ -28,7 +28,7 @@ public class VersionAPI extends AbstractAPI {
 		try {
 			return ResponseEntity.ok(configurationService.getWSVersion());
 		} catch (Exception e) {
-			throw new BussinesException(WS_VERSION_ERROR_CODE, "problème de la récupération de la version");
+			throw new BussinesException(WS_VERSION_ERROR_CODE, "Problem while retrieving version");
 		}
 	}
 
